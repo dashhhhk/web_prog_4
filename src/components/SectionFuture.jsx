@@ -43,16 +43,11 @@ const ContactsColumn = ({ contacts }) => (
   </div>
 );
 
-const Footer = () => (
-  <footer className="section" style={{ borderTop: '1px solid #000', padding: '1rem 0', marginTop: '2rem' }}>
-    <p className="footer-text">© 2025 GPT-4. Все права защищены.</p>
-  </footer>
-);
 
 const SectionFuture = () => {
   const { title, buttonText, companyInfo, links, company, contacts } = sectionFutureData;
   return (
-    <section className="SectionFuture.section">
+    <section className="SectionFuture section">
       <div className="section-future-content">
         <Title title={title} />
         <a href="#!" className="section-future-button">
@@ -68,7 +63,6 @@ const SectionFuture = () => {
           </div>
         </div>
         
-        <Footer />
       </div>
     </section>
   );

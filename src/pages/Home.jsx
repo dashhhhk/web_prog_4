@@ -7,6 +7,7 @@ import Blog from '../components/Blog';
 import CTA from '../components/CTA';
 import MyApps from '../components/MyApps';
 import SectionFuture from '../components/SectionFuture';
+import Footer from '../components/Footer';
 
 
 const Home = () => {
@@ -39,6 +40,7 @@ const Home = () => {
       <section className="section section_future">
         <SectionFuture />
       </section>
+       <Footer />
       
     </>
   );

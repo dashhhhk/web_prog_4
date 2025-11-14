@@ -30,6 +30,7 @@ body {
   background: #040C19;
   padding: 0 2rem;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 body.oh {
@@ -957,7 +958,7 @@ button.cta-start:hover{
     line-height: 30.29px;
     width: 277px;
     height: 90.74px;
-    margin: 61.97px 0 0 26.79px;
+    margin: 61.97px 0 0 5px;
 }
 
 .blog-content,
@@ -1000,9 +1001,10 @@ button.cta-start:hover{
     max-width: none;
     background: #031B34; 
     padding-top: 196px;
-    padding-bottom: 103px;
     box-sizing: border-box;
     margin-top: 100px;
+    align-self: stretch;
+    overflow-x: hidden; 
 }
 
 /* Обертка для контента с отступом от верха цветного блока */
@@ -1132,12 +1134,15 @@ button.cta-start:hover{
  .footer-column:first-child {
     margin-right: 1px;
 }
+
+
 footer{
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .footer-text {
     margin: 0;
     padding: 0;
@@ -1372,7 +1377,6 @@ footer{
   
   .main-card-content .blog-read-more {
     position: static;
-    margin-top: 15px;
     width: auto;
   }
 
