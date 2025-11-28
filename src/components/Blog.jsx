@@ -1,18 +1,18 @@
-import blogData from "../mockData/blogData";
-import { illustrationb, illustration1, illustration2, illustration3, illustration4 } from "../mockData/blogData";
+import blogData, { blogImages } from "../mockData/blogData";
 
-const blogImages = {
-  1: illustrationb,
-  2: illustration1, 
-  3: illustration2,
-  4: illustration3,
-  5: illustration4
+export const BlogTitle = ({ title }) => {
+  const safeTitle = title.replace(/<br\s*\/?>/g, '\n');
+  return (
+    <h2 className="blog-header-title">
+      {safeTitle.split('\n').map((line, index) => (
+        <span key={index}>
+          {line}
+          {index < safeTitle.split('\n').length - 1 && <br />}
+        </span>
+      ))}
+    </h2>
+  );
 };
-
-export const BlogTitle = ({ title }) => (
-  <h2 className="blog-header-title" dangerouslySetInnerHTML={{ __html: title }} />
-);
-
 export const BlogImage = ({ image: { alt, src }, isMain = false }) => (
   <img 
     src={src} 
