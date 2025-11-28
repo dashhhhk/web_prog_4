@@ -1005,7 +1005,9 @@ button.cta-start:hover{
     margin-top: 100px;
     align-self: stretch;
     overflow-x: hidden; 
-}
+     padding-bottom: 25px;
+  }
+
 
 /* Обертка для контента с отступом от верха цветного блока */
 .section-future-content {
@@ -1141,10 +1143,11 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .footer-text {
-    margin: 0;
+    margin:0;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1422,6 +1425,8 @@ footer{
     align-items: center;
     text-align: center;
   }
+
+  
   
   .light-text {
     text-align: center;
@@ -1670,6 +1675,10 @@ footer{
     text-align: center;
     width: 100%;
   }
+
+     .footer-column-link a {
+    text-align: center;
+  }
   
   .footer-column-link h3 {
     margin-bottom: 15px;
@@ -1816,6 +1825,7 @@ footer{
     font-size: 28px;
     line-height: 35px;
     margin-bottom: 25px;
+    height: auto;
   }
   
   .blog-grid {

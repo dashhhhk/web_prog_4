@@ -37,15 +37,15 @@ const CompanyColumn = ({ company }) => (
 const ContactsColumn = ({ contacts }) => (
   <div className="footer-column-link">
     <h3>{contacts.title}</h3>
-    {contacts.items.map((item, index) => (
-      <a key={index} dangerouslySetInnerHTML={{ __html: item }} />
-    ))}
+    <a>ул. Профессора<br />Поздеева, 13, к.Г, Пермь</a>
+    <a href={`tel:${contacts.items[1].replace(/\s|\(|\)|-/g, '')}`}>{contacts.items[1]}</a>
+    <a href={`mailto:${contacts.items[2]}`}>{contacts.items[2]}</a>
   </div>
 );
 
 
 const SectionFuture = () => {
-  const { title, buttonText, companyInfo, links, company, contacts } = sectionFutureData;
+  const { title, buttonText, companyInfo, columns } = sectionFutureData;
   return (
     <section className="SectionFuture section">
       <div className="section-future-content">
@@ -57,9 +57,18 @@ const SectionFuture = () => {
           <CompanyInfo companyInfo={companyInfo} logot={logot} />
           
           <div className="straight-columns">
-            <LinksColumn links={links} />
-            <CompanyColumn company={company} />
-            <ContactsColumn contacts={contacts} />
+            {columns.map((column, index) => {
+              switch(column.type) {
+                case 'links':
+                  return <LinksColumn key={index} links={column} />;
+                case 'company':
+                  return <CompanyColumn key={index} company={column} />;
+                case 'contacts':
+                  return <ContactsColumn key={index} contacts={column} />;
+                default:
+                  return null;
+              }
+            })}
           </div>
         </div>
         
